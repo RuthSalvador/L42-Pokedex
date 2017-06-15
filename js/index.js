@@ -6,7 +6,7 @@ const render = (root) => {
   wrapper.append(Header());
   wrapper.append(SearchPokemon());
 
-  if (state.selectedStation != null){
+  if (state.selectedPokemon != null){
     wrapper.append(PokemonModal());
 
   }
