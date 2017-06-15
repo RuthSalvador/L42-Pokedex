@@ -6,12 +6,17 @@ const render = (root) => {
   wrapper.append(Header());
   wrapper.append(SearchPokemon());
 
+  if (state.selectedStation != null){
+    wrapper.append(PokemonModal());
+
+  }
+
   root.append(wrapper);
 };
 
 const state = {
   allPokemon: null,
-  //selectedPokemon: null
+  selectedPokemon: null
 };
 
 $( _ => {
