@@ -16,11 +16,11 @@ const SearchPokemon = (update) => {
   filterPokemon.append(GridPokemon());
 
  search.on('keyup', (e) => {
-    //if (search.val() != ""){
+    if (search.val() != ""){
       const filterName = filterByPokemon(state.allPokemon.pokemon_entries.pokemon_especies, search.val());
        console.log(filterName);
       reRender(filterPokemon, filterName);
-    //}
+    }
  });
 
   return section;
@@ -61,12 +61,5 @@ const GridPokemon = (update) => {
   });
 
   return containerPokemones;
-};
-
-const reRender = (filterPokemon, filterName) => {
-  filterPokemon.empty();
-  filterName.forEach(namePo => {
-    filterPokemon.append(ItemPokemon(namePo));
-  })
 };
 
