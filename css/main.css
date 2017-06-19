@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Flexo;
+  src: url('../assets/fonts/Flexo-Regular.otf');
+}
+
+*{
+  font-family: Flexo;
+}
+
 section {
   width: 96%;
   margin: 2%;
