@@ -4,13 +4,7 @@ const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header());
-
-  if (state.status == null){
-    wrapper.append(SearchPokemon());
-
-  } else {
-    wrapper.append(PokemonModal());
-  }
+  wrapper.append(SearchPokemon());
 
   root.append(wrapper);
 };
@@ -33,5 +27,6 @@ $( _ => {
   render(root);
   });
 });
+
 
 

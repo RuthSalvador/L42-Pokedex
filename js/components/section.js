@@ -1,7 +1,7 @@
 'use strict';
 
 const ItemPokemon = (thePokemon) => {
-  const divPokemon = $('<div class="div-pokemon waves-effect waves-light modal-trigger" href="#modal' + thePokemon.entry_number + '"></div>');
+  const divPokemon = $('<div class="div-pokemon"></div>');
   let image = '';
     if (thePokemon.entry_number < 10){
       image = $('<img class="materialboxed" src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/00' + thePokemon.entry_number + '.png" />');
@@ -15,8 +15,9 @@ const ItemPokemon = (thePokemon) => {
   const name = $('<h3>'+ thePokemon.pokemon_species.name +'</h3>');
 
     divPokemon.on('click',(e) => {
-    e.preventDefault();
+    //e.preventDefault();
     state.selectedPokemon = thePokemon;
+    PokemonModal('#modal');
     //update();
   });
 
@@ -25,7 +26,7 @@ const ItemPokemon = (thePokemon) => {
   main.append(nav);
   main.append(name);
   return divPokemon;
-  $('.materialboxed').materialbox();
+
 };
 /*
 const GridPokemon = () => {
@@ -38,7 +39,7 @@ const GridPokemon = () => {
 
 const SearchPokemon = () => {
   const section = $('<section></section>');
-  const divSearch = $('<div class="container-search"></div>');
+  const divSearch = $('<div class="container"></div>');
   const search = $('<input id="search-input" type="search">');
   const spanICon = $('<span class="lupa"></span>');
   const buttom = $('<button>A-Z</button>');
@@ -70,4 +71,3 @@ const reRender = (filterPokemon, valIn) => {
     filterPokemon.append($('<p>No se encontró el pokemon solicitado</p>'));
   }
 };
-

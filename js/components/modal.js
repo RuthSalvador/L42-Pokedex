@@ -1,12 +1,10 @@
 'use strict';
 
-const PokemonModal = () => {
-  const divModal = $('<div id="modal' + state.selectedPokemon.entry_number + '" class="modal"></div>');
+const PokemonModal = (modal) => {
+  const divModal = $('<div id="poke-modal" class="modal"></div>');
   const contModal = $('<div class="modal-content"></div>');
-  const title = $('<h4>'+ state.selectedPokemon.name +'</h4>');
-  const divPoke = $('<div class="div-pokemon"></div>');
-
-  divModal.modal('open');
+  const title = $('<h4>'+ state.selectedPokemon.pokemon_species.name +'</h4>');
+  const divPoke = $('<div class="div-poke"></div>');
 
   let imagePoke = '';
   if (state.selectedPokemon.entry_number < 10){
@@ -20,6 +18,7 @@ const PokemonModal = () => {
   const navPoke = $('<nav>iconos</nav>');
   const divDetail = $('<p></p>');
 
+  $(modal).append(divModal);
   divModal.append(contModal);
   contModal.append(title);
   contModal.append(divPoke);
@@ -29,7 +28,4 @@ const PokemonModal = () => {
   contModal.append(divDetail);
 
   return divModal;
-
-
-
 };

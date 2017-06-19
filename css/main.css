@@ -1,0 +1,14 @@
+#modal {
+
+  width: 100%;
+  background-color: rgba(113, 113, 113, 0.51);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 400px;
+}
+
+.div-pokemon {
+  cursor: pointer;
+}
