@@ -2,7 +2,7 @@
 
 const Header = () =>{
   const header = $('<header></header>');
-  const h1 = $('<h1 class="">Pokédex</h1>');
+  const h1 = $('<h1 class="title-poke">Pokédex</h1>');
 
   header.append(h1);
 

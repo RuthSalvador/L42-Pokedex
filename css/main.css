@@ -1,5 +1,70 @@
-#modal {
+section {
+  width: 96%;
+  margin: 2%;
+  text-align: center;
+}
 
+.title-poke {
+  color: #e84848;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.icon-poke {
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+}
+
+.div-search {
+  height: 40px;
+}
+
+.div-search input {
+  border: 1px solid #646464;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 400px;
+  float:left;
+}
+
+button {
+  float: right;
+  background-color: #7aa44a;
+  color: #ffffff;
+  border: none;
+  width: 50px;
+}
+
+.div-pokemon {
+  display: inline-block;
+  width: 185px;
+  height: 243px;
+  margin: 28px;
+  background-color: #dbdbdb;
+}
+
+.div-pokemon > img {
+  width: 100%;
+}
+
+.div-pokemon main {
+  background-image: url("http://assets.pokemon.com/static2/_ui/img/chrome/notches/notch-collectibles.png");
+  background-size: 184px 54px;
+  width: 185px;
+  height: px;
+}
+
+.div-pokemon h3 {
+  margin: 14px 0 0 0;
+  padding: 0;
+}
+
+
+
+#modal {
+  display: none;
   width: 100%;
   background-color: rgba(113, 113, 113, 0.51);
   position: fixed;

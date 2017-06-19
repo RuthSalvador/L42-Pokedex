@@ -15,7 +15,8 @@ const PokemonModal = (modal) => {
     imagePoke = $('<img src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/' + state.selectedPokemon.entry_number + '.png" />');
   }
   const mainPoke = $('<main></main>');
-  const navPoke = $('<nav>iconos</nav>');
+  const navPoke = $('<nav></nav>');
+  //const pokeball = $('<img src="../assets/icon/pokeball_gray.png" />');
   const divDetail = $('<p></p>');
 
   $(modal).append(divModal);
@@ -25,6 +26,7 @@ const PokemonModal = (modal) => {
   divPoke.append(imagePoke);
   divPoke.append(mainPoke);
   mainPoke.append(navPoke);
+  //navPoke.append(pokeball);
   contModal.append(divDetail);
 
   return divModal;
