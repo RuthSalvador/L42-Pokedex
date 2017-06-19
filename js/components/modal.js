@@ -5,6 +5,9 @@ const PokemonModal = () => {
   const contModal = $('<div class="modal-content"></div>');
   const title = $('<h4>'+ state.selectedPokemon.name +'</h4>');
   const divPoke = $('<div class="div-pokemon"></div>');
+
+  divModal.modal('open');
+
   let imagePoke = '';
   if (state.selectedPokemon.entry_number < 10){
     imagePoke = $('<img src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/00' + state.selectedPokemon.entry_number + '.png" />');
@@ -26,5 +29,7 @@ const PokemonModal = () => {
   contModal.append(divDetail);
 
   return divModal;
+
+
 
 };
